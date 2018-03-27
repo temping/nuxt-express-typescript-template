@@ -20,6 +20,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: [
+    "~/modules/typescript.js"
+  ],
   build: {
     /*
     ** Run ESLint on save
