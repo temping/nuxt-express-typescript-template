@@ -19,16 +19,10 @@
 
 <script lang="ts">
 import AppLogo from '~/components/AppLogo.vue'
-import { foo } from '~/service/util'
 
 export default {
   components: {
     AppLogo
-  },
-  methods:{
-    click(args:string){
-
-    }
   }
 }
 </script>

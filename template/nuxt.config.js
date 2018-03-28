@@ -21,21 +21,7 @@ module.exports = {
   ** Build configuration
   */
   modules: [
-    "~/modules/typescript.js"
-  ],
-  build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+    "~/webpack/lint.js",
+    "~/webpack/typescript.js"
+  ]
 }

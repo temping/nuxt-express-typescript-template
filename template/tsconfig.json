@@ -1,20 +1,34 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "es2015"],
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ],
     "module": "es2015",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": true,
-    "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "moduleResolution": "node",  
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": [ "./*" ],
+      "~~/*": [ "./*" ],
+      "@/*": [ "./*" ],
+      "@@/*": [ "./*" ],
+      "assets/*": [ "assets/*" ],
+      "static/*": [ "static/*" ],
     }
-  }
+  },
+  "exclude": [
+    "node_modules/**/*.ts",
+    "node_modules/**/*.vue"
+  ],
+  "include": [
+    "./**/*.ts",
+    "./**/*.vue"
+  ]
 }
