@@ -9,9 +9,7 @@
         nuxt express typescript
       </h2>
       <div class="links">
-        <a
-          @click="click"
-          class="button--green">Foo</a>
+        <a class="button--green">Foo</a>
       </div>
     </div>
   </section>
