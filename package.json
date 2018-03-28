@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-express-typescript-template cli helper",
+  "name": "nuxt-express-typescript-template-basecode",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "vue init labeldock/nuxt-express-typescript-template sample"
   },
