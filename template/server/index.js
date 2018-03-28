@@ -6,7 +6,9 @@ const app = express()
 
 // Nuxt를 인스턴스화 합니다.
 const isProd = process.env.NODE_ENV === 'production'
-const nuxt = new Nuxt({ dev: !isProd })
+const config = require('../nuxt.config.js')
+config.dev = !isProd
+const nuxt = new Nuxt(config)
 
 // 컴파일을 실행합니다.
 if (!isProd) {
