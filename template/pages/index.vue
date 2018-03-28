@@ -3,10 +3,10 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        nuxt-express-typescript-template
+        {{ name }}
       </h1>
       <h2 class="subtitle">
-        nuxt express typescript
+        {{ description }}
       </h2>
       <div class="links">
         <a class="button--green">Foo</a>
