@@ -1,0 +1,18 @@
+{
+  "name": "nuxt-express-typescript-template cli helper",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "vue init labeldock/nuxt-express-typescript-template sample"
+  },
+  "keywords": [
+    "nuxt",
+    "express",
+    "typescript"
+  ],
+  "author": "AHN HO JUNG",
+  "license": "MIT",
+  "devDependencies": {
+    "vue-cli": "^2.9.3"
+  }
+}
