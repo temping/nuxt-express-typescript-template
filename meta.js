@@ -25,7 +25,10 @@ module.exports = {
   completeMessage:[
     "{{#inPlace}}",
     "To get started:\n\n  npm install \n  npm run dev",
+    "\n\nshortcut:\n\n  npm i && npm run dev",
     "{{else}}",
-    "To get started:\n\n  cd {{destDirName}}\n  npm install \n  npm run dev{{/inPlace}}"
+    "To get started:\n\n  cd {{destDirName}}\n  npm install \n  npm run dev",
+    "\n\nshortcut:\n\n  cd {{destDirName}} && npm i && npm run dev",
+    "{{/inPlace}}"
   ].join("")
 }
