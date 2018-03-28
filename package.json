@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.1",
   "scripts": {
-    "test": "vue init labeldock/nuxt-express-typescript-template sample"
+    "test": "vue init labeldock/nuxt-express-typescript-template sample",
+    "test:full": "npm run test && cd sample && npm i && npm run dev"
   },
   "keywords": [
     "nuxt",
