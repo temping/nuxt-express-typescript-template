@@ -7,7 +7,7 @@ set init_name [lindex $argv 0]
 set init_description [lindex $argv 1]
 set init_author [lindex $argv 2]
 
-spawn vue init nuxt-express-typescript-template sample
+spawn vue init temping/nuxt-express-typescript-template sample
 
 expect {
   -re "Target directory exists" {
