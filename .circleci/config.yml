@@ -21,12 +21,19 @@ jobs:
           name: Install expect
           command: sudo apt-get install -y expect && expect -v
       - run:
+          name: Install tree
+          command: sudo apt-get install -y tree
+      - run:
           name: Install vue-cli
           command: sudo npm install -g vue-cli && vue --version
       - run:
           name: Init vue template 'sample'
           working_directory: ~/project
           command: expect source/.circleci/vue-cli-init.exp myproject mydescription "Real Name"
+      - run:
+          name: tree sample
+          working_directory: ~/project
+          command: tree sample
       - run:
           name: sample package.json
           working_directory: ~/project/sample
