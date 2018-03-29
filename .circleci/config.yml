@@ -31,10 +31,6 @@ jobs:
           working_directory: ~/project
           command: expect source/.circleci/vue-cli-init.exp myproject mydescription "Real Name"
       - run:
-          name: pwd
-          working_directory: ~/project
-          command: pwd && ls
-      - run:
           name: tree sample
           working_directory: ~/project
           command: tree sample
@@ -66,8 +62,7 @@ jobs:
           at: ~/project
       - run:
           name: Server start(npm run start)
-          working_directory: ~/project/vue-simple/sample
-          command: npm start
+          command: npm run dev
           background: true
       - run:
           name: GET index
