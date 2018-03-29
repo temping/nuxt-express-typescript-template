@@ -10,7 +10,7 @@ sample: &sample
 
 version: 2
 jobs:
-  checkout:
+  vue-init:
     <<: *source
     steps:
       - checkout
@@ -75,10 +75,10 @@ workflows:
   version: 2
   vue-init:
     jobs:
-      - checkout
+      - vue-init
       - install:
           requires:
-            - checkout
+            - vue-init
       - server:
           requires:
             - install
