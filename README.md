@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/temping/nuxt-express-typescript-template/tree/master.svg?style=shield)](https://circleci.com/gh/temping/nuxt-express-typescript-template/tree/master)
+
 # nuxt-express-typescript-template
 
 ## Feature
