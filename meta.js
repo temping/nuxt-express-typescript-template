@@ -8,12 +8,12 @@ module.exports = {
     name: {
       type: "string",
       required: true,
-      message: "Project name"
+      message: "App name"
     },
     description: {
       type: "string",
       required: false,
-      message: "Project description",
+      message: "App description",
       default: "Nuxt + Express + TypeScript project"
     },
     author: {

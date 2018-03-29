@@ -1,0 +1,78 @@
+source: &source
+  working_directory: ~/project/source
+  docker:
+    - image: circleci/node:8.10-browsers
+
+sample: &sample
+  working_directory: ~/project/sample
+  docker:
+    - image: circleci/node:8.10-browsers
+
+version: 2
+jobs:
+  checkout:
+    <<: *source
+    steps:
+      - checkout
+      - run:
+          name: apt update
+          command: sudo apt-get update
+      - run:
+          name: Install expect
+          command: sudo apt-get install -y expect && expect -v
+      - run:
+          name: Install vue-cli
+          command: sudo npm install -g vue-cli && vue --version
+      - run:
+          name: Init vue template 'sample'
+          working_directory: ~/project
+          command: expect source/.circleci/vue-cli-init.exp myproject mydescription "Real Name"
+      - run:
+          name: sample package.json
+          working_directory: ~/project/sample
+          command: cat package.json
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - sample
+
+  install:
+    <<: *sample
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Npm install
+          command: npm install
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - sample
+  server:
+    <<: *sample
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Server start(npm run start)
+          working_directory: ~/project/vue-simple/sample
+          command: npm start
+          background: true
+      - run:
+          name: GET index
+          command: wget -O result.html --retry-connrefused --waitretry=2 --read-timeout=20 --timeout=15 -t 12 localhost:8080
+      - run:
+          name: Result response
+          command: cat result.html
+
+workflows:
+  version: 2
+  vue-init:
+    jobs:
+      - checkout
+      - install:
+          requires:
+            - checkout
+      - server:
+          requires:
+            - init

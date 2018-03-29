@@ -1,0 +1,36 @@
+#!/usr/bin/expect
+
+# ./vue-cli-init.expect name desc auther
+
+set timeout 20
+set init_name [lindex $argv 0]
+set init_description [lindex $argv 1]
+set init_author [lindex $argv 2]
+
+spawn vue init nuxt-express-typescript-template sample
+
+expect {
+  -re "Target directory exists" {
+    send "Y\r"
+    exp_continue
+  }
+
+  -re "App name" {
+    send "$init_name\r"
+    exp_continue
+  }
+
+  -re "App description" {
+    send "$init_description\r"
+    exp_continue
+  }
+
+  -re "Author" {
+    send "$init_author\r"
+    exp_continue
+  }
+
+  timeout {
+    exit 1
+  }
+}
