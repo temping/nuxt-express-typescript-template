@@ -66,7 +66,7 @@ jobs:
           background: true
       - run:
           name: GET index
-          command: wget -O result.html --retry-connrefused --waitretry=2 --read-timeout=20 --timeout=15 -t 12 localhost:8080
+          command: wget -O result.html --retry-connrefused --waitretry=3 --read-timeout=20 --timeout=15 -t 40 localhost:3000
       - run:
           name: Result response
           command: cat result.html
