@@ -1,9 +1,9 @@
 {
   "name": "nuxt-express-typescript-template-basecode",
   "private": true,
-  "version": "1.0.1",
+  "version": "2.0.0",
   "scripts": {
-    "sample:init": "vue init $(pwd) sample",
+    "sample:init": "rimraf sample && vue init $(pwd) sample",
     "sample:run": "(cd sample && npm i && npm run dev)",
     "sample": "npm run sample:init && npm run sample:run"
   },
@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vue/cli": "^3.0.4",
-    "@vue/cli-init": "^3.0.4"
+    "@vue/cli-init": "^3.0.4",
+    "rimraf": "^2.6.2"
   }
 }

@@ -1,0 +1,9 @@
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitignore
+index.d.ts
+nuxt.config.js
+package.json
+README.md
+tsconfig.json
