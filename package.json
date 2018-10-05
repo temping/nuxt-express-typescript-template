@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.1",
   "scripts": {
-    "sample:init": "vue init temping/nuxt-express-typescript-template sample",
+    "sample:init": "vue init $(pwd) sample",
     "sample:run": "(cd sample && npm i && npm run dev)",
     "sample": "npm run sample:init && npm run sample:run"
   },
@@ -15,6 +15,7 @@
   "author": "AHN HO JUNG",
   "license": "MIT",
   "devDependencies": {
-    "vue-cli": "^2.9.6"
+    "@vue/cli": "^3.0.4",
+    "@vue/cli-init": "^3.0.4"
   }
 }

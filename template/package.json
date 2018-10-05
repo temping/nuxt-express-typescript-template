@@ -1,8 +1,8 @@
 {
-  "name": "nett",
-  "description": "Nuxt + Express + TypeScript project",
-  "author": "AHN HO JUNG <>",
-  "version": "2.0.0.alpha-1",
+  "name": "{{ name }}",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development node server",
