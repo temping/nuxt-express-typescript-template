@@ -3,24 +3,23 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        {{ name }}
+        GIT
       </h1>
       <h2 class="subtitle">
-        {{ description }}
+        temping/nuxt-express-typescript-template
       </h2>
       <div class="links">
-        <nuxt-link class="button--green" to="/contact">Go to conatact</nuxt-link>
+        <a class="button--green" @click="openReference">OPEN</a>
       </div>
     </div>
   </section>
 </template>
-
 <script lang="ts">
-import AppLogo from '~/components/AppLogo.vue'
-
 export default {
-  components: {
-    AppLogo
+  methods: {
+    openReference(){
+      window.open("https://github.com/temping/nuxt-express-typescript-template", "_blank");
+    }
   }
 }
 </script>

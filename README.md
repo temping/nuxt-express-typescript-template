@@ -3,18 +3,20 @@
 # nuxt-express-typescript-template
 
 ## Feature
-- Nuxt + Express
-- Nuxt + Typescript
+- Nuxt 2.x
+- Express 4.x
+- Typescript 3.x
+- SCSS
+- ~~~pm2~~~
 
-## Todo
-- [ ] Environment Variables (developement, test, production)
-- [ ] Some errors in typescript are not visible. (But it works well)
-- [ ] Partially activated lint problem
-- [ ] nuxt 2.0
+## npm script
+- [x] dev
+- [ ] lint
+- [ ] fix (lint --fix)
+- [ ] build
+- [ ] generate
 
 ## Installation
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli)(vue-cli 2.x<=).
-
 ``` bash
 vue init temping/nuxt-express-typescript-template myproject
 ```

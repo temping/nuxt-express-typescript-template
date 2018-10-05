@@ -4,7 +4,7 @@
     "lib": [
       "dom",
       "es5",
-      "es2015.promise"
+      "esnext"
     ],
     "module": "es2015",
     "moduleResolution": "node",  
@@ -16,11 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [ "./*" ],
-      "~~/*": [ "./*" ],
       "@/*": [ "./*" ],
-      "@@/*": [ "./*" ],
       "assets/*": [ "assets/*" ],
-      "static/*": [ "static/*" ],
+      "static/*": [ "static/*" ]
     }
   },
   "exclude": [

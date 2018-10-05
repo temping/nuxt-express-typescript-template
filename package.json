@@ -3,8 +3,9 @@
   "private": true,
   "version": "1.0.1",
   "scripts": {
-    "test": "vue init temping/nuxt-express-typescript-template sample",
-    "test:full": "npm run test && cd sample && npm i && npm run dev"
+    "sample:init": "vue init temping/nuxt-express-typescript-template sample",
+    "sample:run": "(cd sample && npm i && npm run dev)",
+    "sample": "npm run sample:init && npm run sample:run"
   },
   "keywords": [
     "nuxt",
@@ -14,6 +15,6 @@
   "author": "AHN HO JUNG",
   "license": "MIT",
   "devDependencies": {
-    "vue-cli": "^2.9.3"
+    "vue-cli": "^2.9.6"
   }
 }
